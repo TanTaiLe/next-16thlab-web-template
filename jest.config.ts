@@ -6,14 +6,13 @@ const createJestConfig = nextJest({
 
 const customJestConfig = {
   preset: 'ts-jest',
+  moduleDirectories: ['node_modules', '<rootDir>/'],
   testEnvironment: 'jest-environment-jsdom',
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1', // alias @/ trỏ về thư mục gốc
   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
-  transform: {
-    '^.+\\.(ts|tsx|js|jsx)$': 'babel-jest',
-  },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
 }
 
 export default createJestConfig(customJestConfig)
