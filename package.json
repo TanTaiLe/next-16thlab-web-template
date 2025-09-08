@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write .",
-    "test": "jest --passWithCoverage",
+    "test": "jest --passWithNoTests",
     "postinstall": "prisma generate"
   },
   "dependencies": {
